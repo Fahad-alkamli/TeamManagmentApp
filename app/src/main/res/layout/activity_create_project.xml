@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_project"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+
+    tools:context="alkamli.fahad.teammanagment.teammanagment.views.CreateProjectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentLayout"
+        android:orientation="vertical"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/projectName"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+
+
+        android:textColor="@color/brown"
+        android:textColorHint="@color/secondary_text"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textSize="20sp"
+
+        android:hint="@string/project_name" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="@string/start_date"
+        android:ems="10"
+        android:id="@+id/startDate"
+        android:gravity="center"
+        android:textColor="@color/brown"
+        android:textColorHint="@color/secondary_text"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="@string/end_date"
+        android:ems="10"
+        android:id="@+id/endDate"
+        android:gravity="center"
+        android:textColor="@color/brown"
+        android:textColorHint="@color/secondary_text"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textSize="20sp"
+        />
+    <CheckBox
+        android:text="@string/enable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enableCheckBox"
+        android:textColor="@color/brown"
+        android:textColorHint="@color/secondary_text"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textSize="20sp"
+        />
+    <Button
+        android:id="@+id/createProject"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_project"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@color/black_overlay"
+        android:textColor="#880e4f"
+        android:longClickable="false"
+
+        android:onClick="createProject"
+        android:gravity="center_vertical|center_horizontal|center" />
+
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:id="@+id/progressBar"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</RelativeLayout>

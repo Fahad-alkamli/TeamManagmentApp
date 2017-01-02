@@ -1,0 +1,28 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+       <!-- <item name="android:windowAnimationStyle">@style/AppTheme.Window</item>-->
+    </style>
+
+
+
+    <!-- ToolBar http://stackoverflow.com/questions/26969424/how-to-set-toolbar-text-and-back-arrow-color-->
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">#fafafa</item>
+    </style>
+
+    <!-- This them so we can have the activity in a full screen mode-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+
+</resources>

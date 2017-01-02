@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/addHours"
+        android:title="@string/add_hours_to_task" />
+    <item
+        android:id="@+id/taskCompleted"
+        android:title="@string/mark_as_complete" />
+    <item
+        android:id="@+id/taskNotComplete"
+        android:title="@string/mark_as_not_complete" />
+    <item
+        android:id="@+id/editTask"
+        android:title="@string/edit_task" />
+    <item
+        android:id="@+id/taskMembers"
+        android:title="@string/task_members" />
+    <item
+        android:id="@+id/deleteTask"
+        android:title="@string/delete_task" />
+</menu>

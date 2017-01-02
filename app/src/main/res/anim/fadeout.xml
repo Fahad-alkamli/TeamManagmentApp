@@ -1,0 +1,7 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+    <alpha android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:duration="@android:integer/config_shortAnimTime"/>
+    //http://stackoverflow.com/questions/3515264/can-i-change-the-android-startactivity-transition-animation
+</set>
