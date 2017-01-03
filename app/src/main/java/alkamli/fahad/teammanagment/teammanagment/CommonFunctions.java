@@ -33,6 +33,11 @@ public class CommonFunctions {
     public static final String doublePattern="^\\d{1,}\\.?\\d{1,}?$";
 
     public static final int waitingTime=60000;
+    /**
+     This method will clean the string from any spaces.
+     @param temp The string to clean
+     @return The string without any spaces
+     */
     public static String clean(String temp)
     {
         try {

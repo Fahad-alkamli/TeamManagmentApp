@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -26,6 +28,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 import alkamli.fahad.teammanagment.teammanagment.CommonFunctions;
 import alkamli.fahad.teammanagment.teammanagment.R;
+import alkamli.fahad.teammanagment.teammanagment.views.fragments.adapters.project.ProjectAdapter2;
 import alkamli.fahad.teammanagment.teammanagment.views.fragments.adapters.user.UsersAdapter;
 import alkamli.fahad.teammanagment.teammanagment.http_client.HttpRequestClient;
 import alkamli.fahad.teammanagment.teammanagment.http_client.HttpRequestClientResponse;
@@ -40,7 +43,7 @@ import static android.util.Log.e;
 public class UsersFragment extends Fragment implements Observer {
 
     final String TAG="Alkamli";
-    static ListView usersListView;
+    static RecyclerView usersListView;
     static Fragment thisFrgment;
     SwipeRefreshLayout userRefresh;
     final int assignUserToProjectsRequest=1;
@@ -60,7 +63,7 @@ public class UsersFragment extends Fragment implements Observer {
         // Inflate the layout for this fragment
        // Log.e(TAG,"User onCreateView");
         View view=inflater.inflate(R.layout.fragment_users, container, false);
-        usersListView =(ListView)view.findViewById(R.id.usersListView);
+        usersListView =(RecyclerView)view.findViewById(R.id.usersListView);
         userRefresh=(SwipeRefreshLayout)  view.findViewById(R.id.userRefresh);
         userRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -90,9 +93,10 @@ public class UsersFragment extends Fragment implements Observer {
             }
         });
         // getItems();
-
         update(null,null);
         usersListView.setClickable(false);
+        usersListView.setAdapter(new UsersAdapter(thisFrgment,Service.getUsernamesList()));
+        usersListView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
     }
 
@@ -157,7 +161,7 @@ public class UsersFragment extends Fragment implements Observer {
             Log.d("Alkamli", "getUsernames()==null");
             return ;
         }
-        final UsersAdapter adapter = new UsersAdapter(thisFrgment, temp,Service.getUsernamesList());
+        final UsersAdapter adapter = new UsersAdapter(thisFrgment,Service.getUsernamesList());
         if(getActivity() != null)
         {
             getActivity().runOnUiThread(new Runnable(){

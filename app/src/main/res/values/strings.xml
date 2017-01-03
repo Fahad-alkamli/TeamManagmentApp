@@ -76,7 +76,7 @@
     <string name="fragmentTasksTitle">Tasks</string>
     <string name="not_a_valid_email">not a valid email</string>
     <string name="login_is_successful">Login is Successful</string>
-    <string name="login_was_not_successful"></string>
+    <string name="login_was_not_successful">Login was not successful</string>
     <string name="user_creation_was_not_successful">user creation was not successful</string>
     <string name="user_creation_is_successful">user creation is Successful</string>
     <string name="not_authorized">Not Authorized</string>

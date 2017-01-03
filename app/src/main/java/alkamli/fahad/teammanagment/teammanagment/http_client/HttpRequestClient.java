@@ -34,6 +34,10 @@ public class HttpRequestClient{
             Log.e(TAG, ("MethodName: " + Local.class.getEnclosingMethod().getName() + " || ErrorMessage: " + e.getMessage()));
         }
     }
+    /**
+     This method will create an Http client and it will take the url, the data to post.
+     @return HttpRequestClientResponse
+     */
     public HttpRequestClientResponse post()
     {
         try{
@@ -41,7 +45,6 @@ public class HttpRequestClient{
             {
                 return new HttpRequestClientResponse(HttpsURLConnection.HTTP_BAD_REQUEST,"");
             }
-
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(15000);
             conn.setConnectTimeout(5000);
@@ -93,7 +96,6 @@ public class HttpRequestClient{
                     }else{
                         return new HttpRequestClientResponse(responseCode,"");
                     }
-
                 }catch(Exception e)
                 {
                     class Local {

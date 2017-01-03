@@ -62,7 +62,6 @@ public class ProjectAdapter2 extends RecyclerView.Adapter<ProjectAdapter2.MyView
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
-
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View CustomView = inflater.inflate(R.layout.project_list_element, parent, false);
 
