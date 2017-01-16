@@ -99,7 +99,6 @@
     <string name="Could_not_delete_a_project">عملية حذف مشروع فاشلة</string>
     <string name="change_email">قم بتغيير البريد الالكتروني</string>
     <string name="change_nickname">قم بتغيير اسم المستخدم</string>
-
     <string name="password_could_not_be_changed">عملية تغيير كلمة مرور فاشلة. </string>
     <string name="old_password_is_not_correct">كلمة المرور القديمة خاطئة.</string>
     <string name="email_has_been_changed_successfully">تم تغيير البريد الالكتروني بنجاح.</string>
@@ -107,6 +106,7 @@
     <string name="password_is_not_correct">كلمة المرور خاطئة.</string>
     <string name="nickname_has_been_changed_successfully">تم تغيير اسم المستخدم بنجاح.</string>
     <string name="nickname_could_not_be_changed">عملية تغيير اسم المستخدم فاشلة.</string>
+    <string name="end_date_should_be_after_the_start_date">تاريخ الانتهاء يجب ان يكون بعد تاريخ البداية</string>
 
 
 </resources>

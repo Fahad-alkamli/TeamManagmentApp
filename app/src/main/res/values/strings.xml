@@ -83,7 +83,7 @@
     <string name="passwords_do_not_match">Passwords do not match</string>
     <string name="password_has_been_changed_successfully">Password has been changed successfully</string>
     <string name="request_failed">"Request failed"</string>
-    <string name="not_valid_date_message">Only dd\/mm\/yyyy</string>
+    <string name="not_valid_date_message">Only dd/mm/yyyy</string>
     <string name="task_has_been_created">Task has been created</string>
     <string name="task_creation_was_not_Successful">Task creation wasn\'t Successful</string>
     <string name="update_project">Update Project</string>
@@ -131,9 +131,6 @@
     <string name="Could_not_delete_a_project">Couldn\'t delete a project</string>
     <string name="change_email">Change Email</string>
     <string name="change_nickname">Change Nickname</string>
-
-
-
     <string name="password_could_not_be_changed">Password could not be changed.</string>
     <string name="old_password_is_not_correct">Old password is not correct.</string>
     <string name="email_has_been_changed_successfully">Email has been changed successfully.</string>
@@ -141,4 +138,7 @@
     <string name="password_is_not_correct">Password is not correct.</string>
     <string name="nickname_has_been_changed_successfully">Nickname has been changed successfully</string>
     <string name="nickname_could_not_be_changed">Nickname could not be changed.</string>
+    <string name="end_date_should_be_after_the_start_date">End Date should be after the start date</string>
+
+
 </resources>

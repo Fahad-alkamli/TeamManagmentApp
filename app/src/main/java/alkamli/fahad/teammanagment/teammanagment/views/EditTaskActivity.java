@@ -33,6 +33,7 @@ import alkamli.fahad.teammanagment.teammanagment.service.Service;
 import entity.Task;
 
 import static alkamli.fahad.teammanagment.teammanagment.CommonFunctions.TAG;
+import static alkamli.fahad.teammanagment.teammanagment.CommonFunctions.clean;
 import static alkamli.fahad.teammanagment.teammanagment.CommonFunctions.sessionExpiredHandler;
 
 public class EditTaskActivity extends AppCompatActivity implements  Validator.ValidationListener{
@@ -112,6 +113,12 @@ public class EditTaskActivity extends AppCompatActivity implements  Validator.Va
 
     @Override
     public void onValidationSucceeded() {
+        //make sure the end date comes after the start date
+        if(!CommonFunctions.compareDates(clean(taskStartDate.getText().toString()),clean(taskEndDate.getText().toString())))
+        {
+            taskEndDate.setError(getString(R.string.end_date_should_be_after_the_start_date));
+            return;
+        }
         if(CommonFunctions.getSharedPreferences(this).getBoolean("admin",false))
         {
             task.setTask_summary(taskSummary.getText().toString());

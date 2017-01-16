@@ -32,6 +32,7 @@ import entity.Project;
 import entity.Task;
 
 import static alkamli.fahad.teammanagment.teammanagment.CommonFunctions.TAG;
+import static alkamli.fahad.teammanagment.teammanagment.CommonFunctions.clean;
 import static alkamli.fahad.teammanagment.teammanagment.CommonFunctions.sessionExpiredHandler;
 import static android.util.Log.e;
 
@@ -98,6 +99,12 @@ public class CreateNewTaskActivity extends AppCompatActivity implements Validato
 
     @Override
     public void onValidationSucceeded() {
+        //make sure the end date comes after the start date
+        if(!CommonFunctions.compareDates(clean(startDate.getText().toString()),clean(endDate.getText().toString())))
+        {
+            endDate.setError(getString(R.string.end_date_should_be_after_the_start_date));
+            return;
+        }
         new Thread(new Runnable() {
             @Override
             public void run() {

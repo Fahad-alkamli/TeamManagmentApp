@@ -214,4 +214,44 @@ public class CommonFunctions {
     }
 
 
+
+    //Compare two dates and make sure that the startdate comes after the enddate
+    public static boolean compareDates(String startDate,String endDate)
+    {
+        try {
+            int day = Integer.parseInt(startDate.split("/")[0]);
+            int month = Integer.parseInt(startDate.split("/")[1]);
+            int year = Integer.parseInt(startDate.split("/")[2]);
+
+            int day2 = Integer.parseInt(endDate.split("/")[0]);
+            int month2 = Integer.parseInt(endDate.split("/")[1]);
+            int year2 = Integer.parseInt(endDate.split("/")[2]);
+
+            if(year<year2)
+            {
+                return true;
+            }else if(year==year2)
+            {
+                //Here we have a date in the same year we need to compare the month and the day
+                if(month<month2)
+                {
+                    return true;
+                }else if(month==month2)
+                {
+                    //Here we have a date in the same month we need to check the day
+                    if(day<day2)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }catch(Exception e)
+        {
+            Log.e(TAG,e.getMessage());
+        }
+
+        return false;
+    }
+
+
 }

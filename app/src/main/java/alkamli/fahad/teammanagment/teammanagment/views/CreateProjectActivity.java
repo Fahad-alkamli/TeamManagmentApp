@@ -33,6 +33,7 @@ import alkamli.fahad.teammanagment.teammanagment.service.Service;
 import entity.Project;
 
 import static alkamli.fahad.teammanagment.teammanagment.CommonFunctions.TAG;
+import static alkamli.fahad.teammanagment.teammanagment.CommonFunctions.clean;
 import static android.util.Log.e;
 
 public class CreateProjectActivity extends AppCompatActivity {
@@ -85,19 +86,19 @@ public class CreateProjectActivity extends AppCompatActivity {
     {
         boolean go=true;
         //validation
-        if(CommonFunctions.clean(projectName.getText().toString()).equals("") ||CommonFunctions.clean(projectName.getText().toString()).length()<=0 )
+        if(clean(projectName.getText().toString()).equals("") || clean(projectName.getText().toString()).length()<=0 )
         {
             //empty
             projectName.setError(getString(R.string.error_field_required));
             go=false;
         }
-        if(CommonFunctions.clean(startDate.getText().toString()).equals("")  ||CommonFunctions.clean(startDate.getText().toString()).length()<=0 )
+        if(clean(startDate.getText().toString()).equals("")  || clean(startDate.getText().toString()).length()<=0 )
         {
             //empty
             startDate.setError(getString(R.string.error_field_required));
             go=false;
         }
-        if(CommonFunctions.clean(endDate.getText().toString()).equals("")  ||CommonFunctions.clean(endDate.getText().toString()).length()<=0 )
+        if(clean(endDate.getText().toString()).equals("")  || clean(endDate.getText().toString()).length()<=0 )
         {
             //empty
             endDate.setError(getString(R.string.error_field_required));
@@ -109,6 +110,7 @@ public class CreateProjectActivity extends AppCompatActivity {
             Log.d("Alkamli","Should of stopped");
             return;
         }
+
 
         Pattern r = Pattern.compile(CommonFunctions.datePattern);
         Matcher m = r.matcher(startDate.getText().toString());
@@ -130,7 +132,12 @@ public class CreateProjectActivity extends AppCompatActivity {
         {
             return;
         }
-
+        //make sure the end date comes after the start date
+        if(!CommonFunctions.compareDates(clean(startDate.getText().toString()),clean(endDate.getText().toString())))
+        {
+            endDate.setError(getString(R.string.end_date_should_be_after_the_start_date));
+            return;
+        }
         //Let's start sending the request
 
          session=CommonFunctions.getSharedPreferences(getApplicationContext()).getString("session",null);
@@ -223,7 +230,7 @@ public class CreateProjectActivity extends AppCompatActivity {
 
                 }
                 //First we make sure the response is a session
-                if(CommonFunctions.clean(response).length()<0)
+                if(clean(response).length()<0)
                 {
                     CommonFunctions.sendToast(activity,getString(R.string.project_creation_was_not_successful));
 
@@ -307,7 +314,7 @@ public class CreateProjectActivity extends AppCompatActivity {
 
                 }
                 //First we make sure the response is a session
-                if(CommonFunctions.clean(response).length()<0)
+                if(clean(response).length()<0)
                 {
                     CommonFunctions.sendToast(activity,getString(R.string.project_update_was_not_successful));
 
