@@ -67,7 +67,7 @@ public class Service extends IntentService {
             //Already running
             return Service.START_STICKY;
         }
-        projectbackgroundProcess =  new ProjectBackgroundProcess(getBaseContext(),projectWaitingList);
+         projectbackgroundProcess =  new ProjectBackgroundProcess(getBaseContext(),projectWaitingList);
          userbackgroundProcess=new UserBackgroundProcess(getBaseContext(),userWaitingList);
          taskBackgroundProcess=new TaskBackgroundProcess(getBaseContext(),taskWaitingList);
         Log.i(TAG,"Service onStartCommand");
@@ -96,7 +96,7 @@ public class Service extends IntentService {
             taskBackgroundProcess.addObserver(observer);
             Log.i("Alkamli","add Task Observer");
         }else{
-            Log.i("Alkamli","We didn't add Task Observer yet");
+            Log.i("Alkamli","We didn't add Task Observer yet, adding it now");
             taskWaitingList.add(observer);
         }
     }

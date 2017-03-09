@@ -8,7 +8,7 @@
     <string name="error_invalid_password">الباسورد قصير جدا</string>
     <string name="error_incorrect_password">كلمة المرور خاطئه</string>
     <string name="error_field_required">هذه الخانة مطلوبة</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="permission_rationale">Contacts permissions are needed for providing email completions.</string>
     <string name="enter_email">البريد الالكتروني</string>
     <string name="enter_password">كلمة المرور</string>
     <string name="enter_nickname">اسم المستخدم</string>

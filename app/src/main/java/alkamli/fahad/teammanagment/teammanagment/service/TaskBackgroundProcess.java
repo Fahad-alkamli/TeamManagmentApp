@@ -57,7 +57,7 @@ public class TaskBackgroundProcess extends Observable {
 
     private void backgroundProcess() {
         try {
-            Log.d(TAG, "Project backgroundProcess Started");
+            Log.d(TAG, "Task backgroundProcess Started");
             do {
                 synchronized (this) {
                     try {
@@ -221,6 +221,7 @@ public class TaskBackgroundProcess extends Observable {
                     {
                         if (CommonFunctions.clean(response.getResponseString()).length() > 0)
                         {
+                            Log.i(TAG,response.getResponseString());
                             ObjectMapper objectMapper = new ObjectMapper();
                             objectMapper.configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, true);
                             TypeReference<List<TaskListViewElement>> mapType = new TypeReference<List<TaskListViewElement>>() {

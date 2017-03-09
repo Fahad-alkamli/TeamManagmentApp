@@ -1,34 +1,36 @@
 <resources>
-    <string name="user_login_url">http://172.16.42.189:8080/user_login</string>
-    <string name="user_logout_url">http://172.16.42.189:8080/user_logout</string>
-    <string name="create_project_url">http://172.16.42.189:8080/create_project</string>
-    <string name="create_user_url">http://172.16.42.189:8080/create_user</string>
-    <string name="get_all_projects_url">http://172.16.42.189:8080/get_all_projects</string>
-    <string name="get_all_users_url">http://172.16.42.189:8080/get_all_users</string>
-    <string name="add_member_to_project_url">http://172.16.42.189:8080/add_member_to_project</string>
-    <string name="enable_project_url">http://172.16.42.189:8080/enable_project</string>
-    <string name="disable_project_url">http://172.16.42.189:8080/disable_project</string>
-    <string name="get_project_users_url">http://172.16.42.189:8080/getUsersBelongToProject</string>
-    <string name="remove_users_from_project_url">http://172.16.42.189:8080/removeUsersFromProject</string>
-    <string name="update_project_url">http://172.16.42.189:8080/update_project</string>
-    <string name="delete_project_url">http://172.16.42.189:8080/delete_project</string>
-    <string name="forgot_password_url">http://172.16.42.189:8080/reset_password</string>
-    <string name="change_password_url">http://172.16.42.189:8080/change_password_by_token</string>
-    <string name="change_password_by_admin_url">http://172.16.42.189:8080/change_password_by_admin</string>
-    <string name="delete_user_url">http://172.16.42.189:8080/delete_user</string>
-    <string name="create_task_url">http://172.16.42.189:8080/create_task</string>
-    <string name="get_all_tasks_url">http://172.16.42.189:8080/get_all_tasks</string>
-    <string name="update_task_url">http://172.16.42.189:8080/update_task</string>
-    <string name="delete_task_url">http://172.16.42.189:8080/delete_task</string>
-    <string name="assign_task_to_user_url">http://172.16.42.189:8080/assign_task_to_user</string>
-    <string name="get_task_members_url">http://172.16.42.189:8080/get_task_members</string>
-    <string name="remove_task_from_user_url">http://172.16.42.189:8080/remove_task_from_user</string>
-    <string name="submit_task_complete_url">http://172.16.42.189:8080/submit_task_complete</string>
-    <string name="submit_task_not_complete_url">http://172.16.42.189:8080/submit_task_not_complete</string>
-    <string name="add_hours_to_task_url">http://172.16.42.189:8080/add_hours_to_task</string>
-    <string name="change_password_by_session_url">http://172.16.42.189:8080/change_password_by_user_session</string>
-    <string name="change_email_url">http://172.16.42.189:8080/change_email_by_user_session</string>
-    <string name="change_nickname_url">http://172.16.42.189:8080/change_nickname_by_user_session</string>
+    <string name="user_login_url">http://192.168.43.59:8080/user_login</string>
+    <string name="user_logout_url">http://192.168.43.59:8080/user_logout</string>
+    <string name="create_project_url">http://192.168.43.59:8080/create_project</string>
+    <string name="create_user_url">http://192.168.43.59:8080/create_user</string>
+    <string name="get_all_projects_url">http://192.168.43.59:8080/get_all_projects</string>
+    <string name="get_all_users_url">http://192.168.43.59:8080/get_all_users</string>
+    <string name="add_member_to_project_url">http://192.168.43.59:8080/add_member_to_project</string>
+    <string name="enable_project_url">http://192.168.43.59:8080/enable_project</string>
+    <string name="disable_project_url">http://192.168.43.59:8080/disable_project</string>
+    <string name="get_project_users_url">http://192.168.43.59:8080/getUsersBelongToProject</string>
+    <string name="remove_users_from_project_url">http://192.168.43.59:8080/removeUsersFromProject</string>
+    <string name="update_project_url">http://192.168.43.59:8080/update_project</string>
+    <string name="delete_project_url">http://192.168.43.59:8080/delete_project</string>
+    <string name="forgot_password_url">http://192.168.43.59:8080/reset_password</string>
+    <string name="change_password_url">http://192.168.43.59:8080/change_password_by_token</string>
+    <string name="change_password_by_admin_url">http://192.168.43.59:8080/change_password_by_admin</string>
+    <string name="delete_user_url">http://192.168.43.59:8080/delete_user</string>
+    <string name="create_task_url">http://192.168.43.59:8080/create_task</string>
+    <string name="get_all_tasks_url">http://192.168.43.59:8080/get_all_tasks</string>
+    <string name="update_task_url">http://192.168.43.59:8080/update_task</string>
+    <string name="delete_task_url">http://192.168.43.59:8080/delete_task</string>
+    <string name="assign_task_to_user_url">http://192.168.43.59:8080/assign_task_to_user</string>
+    <string name="get_task_members_url">http://192.168.43.59:8080/get_task_members</string>
+    <string name="remove_task_from_user_url">http://192.168.43.59:8080/remove_task_from_user</string>
+    <string name="submit_task_complete_url">http://192.168.43.59:8080/submit_task_complete</string>
+    <string name="submit_task_not_complete_url">http://192.168.43.59:8080/submit_task_not_complete</string>
+    <string name="add_hours_to_task_url">http://192.168.43.59:8080/add_hours_to_task</string>
+    <string name="change_password_by_session_url">http://192.168.43.59:8080/change_password_by_user_session</string>
+    <string name="change_email_url">http://192.168.43.59:8080/change_email_by_user_session</string>
+    <string name="change_nickname_url">http://192.168.43.59:8080/change_nickname_by_user_session</string>
+
+
     <string name="app_name">Team Management</string>
     <string name="prompt_email">Your Email Address</string>
     <string name="prompt_password">Your Password</string>
@@ -37,8 +39,8 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    <string name="permission_rationale">Contacts permissions are needed for providing email
+        completions.
     </string>
     <string name="enter_email">Email</string>
     <string name="enter_password">Password</string>
