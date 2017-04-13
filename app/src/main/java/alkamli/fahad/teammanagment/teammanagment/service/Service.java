@@ -31,7 +31,6 @@ public class Service extends IntentService {
     static ArrayList<Observer> taskWaitingList=new ArrayList<Observer>();
     public Service() {
         super("Service");
-        //Log.d(TAG,"Service ");
     }
 
 
@@ -65,6 +64,7 @@ public class Service extends IntentService {
         }
         else{
             //Already running
+            Log.d(TAG,"Service is Already running");
             return Service.START_STICKY;
         }
          projectbackgroundProcess =  new ProjectBackgroundProcess(getBaseContext(),projectWaitingList);
@@ -109,6 +109,9 @@ public class Service extends IntentService {
         if(projectbackgroundProcess!= null)
         {
             projectbackgroundProcess.refreshProjectList();
+        }else{
+
+            Log.e(CommonFunctions.TAG,"projectbackgroundProcess==null");
         }
     }
 
@@ -332,6 +335,12 @@ public class Service extends IntentService {
             }
         }
         return temp;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG,"Service has been destroyed");
     }
 }
 

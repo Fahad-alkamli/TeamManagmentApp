@@ -57,7 +57,7 @@ public class HomeActivity extends AppCompatActivity {
 
         }catch(Exception e)
         {
-            Log.d(TAG,e.getMessage());
+            Log.d(TAG,"onCreate: "+e.getMessage());
 
         }
     }
